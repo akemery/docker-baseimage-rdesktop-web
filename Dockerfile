@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-ubuntu:focal as builder
+FROM akemery/baseimage-ubuntu:jammy as builder
 
 ARG GUACD_VERSION=1.1.0
 
@@ -59,7 +59,7 @@ RUN \
 	/tmp/out/guacd_${GUACD_VERSION}.deb
 
 # nodejs builder
-FROM ghcr.io/linuxserver/baseimage-ubuntu:focal as nodebuilder
+FROM akemery/baseimage-ubuntu:jammy as nodebuilder
 ARG GCLIENT_RELEASE
 
 RUN \
@@ -94,7 +94,7 @@ RUN \
  npm install 
 
 # runtime stage
-FROM ghcr.io/linuxserver/baseimage-rdesktop:focal
+FROM akemery/baseimage-rdesktop
 
 # set version label
 ARG BUILD_DATE
