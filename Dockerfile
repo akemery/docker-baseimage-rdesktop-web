@@ -36,7 +36,7 @@ RUN \
  git clone https://github.com/apache/guacamole-server.git /tmp/guacd && \
  echo "**** build guacd ****" && \
  cd /tmp/guacd && \
- git checkout ${GUACD_VERSION} && \
+ #git checkout ${GUACD_VERSION} && \
  autoreconf -fi && \
  ./configure --prefix=/usr && \
  make -j 2 && \
