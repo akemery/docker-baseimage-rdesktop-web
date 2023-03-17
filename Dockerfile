@@ -99,7 +99,7 @@ FROM akemery/baseimage-rdesktop
 # set version label
 ARG BUILD_DATE
 ARG VERSION
-ARG GUACD_VERSION=1.1.0
+ARG GUACD_VERSION=1.5.0
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="thelamer"
 
