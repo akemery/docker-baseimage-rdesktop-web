@@ -116,7 +116,7 @@ RUN \
  apt-get install -y \
 	gnupg && \
  curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
- echo 'deb https://deb.nodesource.com/node_14.x focal main' \
+ echo 'deb https://deb.nodesource.com/node_14.x jammy main' \
         > /etc/apt/sources.list.d/nodesource.list && \
  apt-get update && \
  DEBIAN_FRONTEND=noninteractive \
@@ -128,7 +128,7 @@ RUN \
 	nodejs \
 	obconf \
 	openbox \
-	python \
+	python3 \
 	xterm && \
  apt-get install -qy --no-install-recommends \
 	$(cat /tmp/out/DEPENDENCIES) && \
