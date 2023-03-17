@@ -1,6 +1,6 @@
 FROM akemery/baseimage-ubuntu:jammy as builder
 
-ARG GUACD_VERSION=1.1.0
+ARG GUACD_VERSION=1.5.1
 
 COPY /buildroot /
 
@@ -36,7 +36,7 @@ RUN \
  git clone https://github.com/apache/guacamole-server.git /tmp/guacd && \
  echo "**** build guacd ****" && \
  cd /tmp/guacd && \
- #git checkout ${GUACD_VERSION} && \
+ git checkout ${GUACD_VERSION} && \
  autoreconf -fi && \
  ./configure --prefix=/usr && \
  make -j 2 && \
