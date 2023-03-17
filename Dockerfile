@@ -1,6 +1,6 @@
 FROM akemery/baseimage-ubuntu:jammy as builder
 
-ARG GUACD_VERSION=1.5.1
+ARG GUACD_VERSION=1.5.0
 
 COPY /buildroot /
 
